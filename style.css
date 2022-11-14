@@ -1,4 +1,22 @@
 
+h1{
+    text-align: center;
+}
+
+.city{
+    text-align: center;
+}
+
+.TheResult {
+    text-align: center;
+}
+
+
+
+
+
+
+
 /* body {
     padding: 10px;
     margin: 70px;
@@ -20,6 +38,8 @@ h1{
 .products-highlights > img {
     width: 30%;   
 } */
+
+/* -------------------------------
 body {
     padding: 10px;
     margin: 50px;
@@ -48,4 +68,4 @@ h1{
 }
 p {
     font-size: 2rem;
-}
+} */
