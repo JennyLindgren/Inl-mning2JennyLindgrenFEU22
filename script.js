@@ -1,4 +1,4 @@
- // "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
+
  
 const Url = "https://api.openweathermap.org/data/2.5/weather?"
 const getCord = `${Url}q=Helsingborg&appid=6a5f19d8f42a5b5921f5b030701c91eb`
@@ -14,6 +14,7 @@ async function fetchApi(url) {
             const jsonResponse = await response.json();
             return jsonResponse;
         }
+        //Felhantering la även in ifall det skulle bli något fel 
         else{
             console.log("Ett fel uppstod vid hämtningen");
         }
@@ -21,7 +22,7 @@ async function fetchApi(url) {
         console.log(error);
     }
 }
- //Huvudfunktion hämtar först lon och lat utifrån stadsnamnet 
+ //Huvudfunktion hämtar lon och lat utifrån stadsnamnet 
 async function getData() {
     let lon, lat;
     await fetchApi(getCord)
@@ -42,8 +43,11 @@ async function getData() {
             const paragraph = document.createElement("p");
             //Lägger till paragrafen i #result
             weatherOutput.append(paragraph);
-            //Skriver ut på webbläsaren
-            paragraph.innerHTML = `${Math.round(response.main.temp)} &#176;C ${response.weather[0].main}`
+            //Skriver ut på webbläsaren och iconen är tagen från openweather och ändras beroende på väder
+            const iconPrefix = "https://openweathermap.org/img/w/";
+            paragraph.innerHTML = `${Math.round(response.main.temp)} &#176;C <img src="${iconPrefix}${response.weather[0].icon}.png" />${response.weather[0].main}`;
+            //Lägger på en klass för att styla
+            paragraph.classList.add("weatherOutput");
         })
 
 }
