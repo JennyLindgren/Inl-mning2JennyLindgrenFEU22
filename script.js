@@ -5,15 +5,16 @@ const getCord = `${Url}q=Helsingborg&appid=6a5f19d8f42a5b5921f5b030701c91eb`
  
 const ApiKey = "6a5f19d8f42a5b5921f5b030701c91eb"
  
-//Denna funktionen gör själva hämtningen och returnerar json
-//Använder try och catch för att fånga upp fel
-// använder await för att vänta in svar innan koden forsätter.
+// Denna funktionen gör själva hämtningen och returnerar json
+// Använder try och catch för att fånga upp fel
+// Använder await för att vänta in svar innan koden forsätter.
 async function fetchApi(url) {
     try{
         const response = await fetch(url);
         if(response.ok){
             console.log(response.ok)
-            const jsonResponse = await response.json(); //.json gör det till ett objekt som går att hantera i javascript .json är asynkromt 
+            //.json gör det till ett objekt som går att hantera i javascript .json är asynkront 
+            const jsonResponse = await response.json(); 
             return jsonResponse;
         }
         //Felhantering la även in ifall det skulle bli något fel 
