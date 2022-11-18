@@ -1,71 +1,29 @@
 
 h1{
     text-align: center;
+    font-size: 3rem;
 }
 
 .city{
     text-align: center;
+    font-size: 2rem;
 }
 
 .TheResult {
     text-align: center;
 }
 
+body{
+    background-color: rgb(202, 231, 241);
+}
+
+.weatherOutput{
+    font-size: 2rem;;
+}
+.weatherOutput img{
+    width: 7%;
+    padding: 0 20px;
+}
 
 
 
-
-
-
-/* body {
-    padding: 10px;
-    margin: 70px;
-    background-color: lightblue;
-    
-}
-h1{
-    font-size: 3rem;;
-}
-.top {
-    text-align: center;
-}
-.products {
-    margin: 20px;
-}
-.products-highlights {
-    margin-bottom: 1rem;  
-}
-.products-highlights > img {
-    width: 30%;   
-} */
-
-/* -------------------------------
-body {
-    padding: 10px;
-    margin: 50px;
-    background-color: lightblue;
-    
-}
-h1{
-    font-size: 3rem;;
-}
-.hero-container {
-    display: flex;
-    margin-bottom: 5rem;
-    margin: 20px;
-}
-.hero-image {
-    order: 1;
-    width: 40%;
-    margin: 20px;
-    padding-left: 70px;
-    
-}
-.hero-box {
-    order:2;
-    width: 50%;
-    padding: 20px;
-}
-p {
-    font-size: 2rem;
-} */
